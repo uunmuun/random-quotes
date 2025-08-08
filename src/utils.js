@@ -1,5 +1,5 @@
 function generateRandomInt(maxInt) {
-  currentQuoteIndex = Math.floor(Math.random() * quotes.length);
+  return Math.floor(Math.random() * maxInt);
 }
 
 export { generateRandomInt };
