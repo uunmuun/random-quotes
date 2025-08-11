@@ -6,31 +6,52 @@ body {
 
 .container {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 20px auto;
   text-align: center;
 }
 
 .btn {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
+  color: white;
   border: none;
   cursor: pointer;
   border-radius: 10px;
 }
+.btn-primary {
+  background-color: #007bff;
+}
 
-.btn:hover {
+.btn-primary:hover {
   background-color: #0056b3;
 }
 
-#quote {
-  font-style: italic;
+.btn-danger {
+  background-color: transparent;
+  color: red;
+  border: 2px solid red;
 }
 
-#quote::before,
-#quote::after {
+.btn-danger:hover {
+  background-color: red;
+  color: white;
+}
+.quote {
+  font-size: 1.2em;
+}
+.quote-text {
+  font-style: italic;
+  /* min-height: 2.3em; */
+  /* margin-block-end: 0.7em; */
+}
+
+#quote-text::before,
+#quote-text::after {
   content: '"';
+}
+
+.quote-author {
+  font-weight: bold;
 }
 
 .favorites-container {
@@ -40,6 +61,8 @@ body {
 }
 
 .favorite-card {
+  display: flex;
+  flex-direction: column;
   background-color: #f9f9f9;
   color: #333;
   padding: 10px 20px;
@@ -49,7 +72,16 @@ body {
   width: 25%;
 }
 
-.author {
+.favorite-card-content {
+  flex: 1;
+  padding: 0px 3px;
+}
+
+.favorite-card button {
+  margin-top: auto;
+}
+
+.favorite-card-author {
   font-style: italic;
 }
 
