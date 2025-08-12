@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { quoteFavoriteBtn } from "../../index.js";
 
 function toggleFavorite(quote, btn, container) {
@@ -6,12 +7,30 @@ function toggleFavorite(quote, btn, container) {
 
   if (quote.isFavorite) {
     showFavoriteCard(quote, container);
+=======
+import { currentQuote, currentQuote as quote } from "../../index.js";
+
+const favoritesContainer = document.getElementById("favorites-container");
+const favoriteBtn = document.getElementById("favorite-btn");
+favoriteBtn.addEventListener("click", () => toggleFavorite(currentQuote));
+
+hideBtn(favoriteBtn);
+
+function toggleFavorite(quote) {
+  quote.isFavorite = !quote.isFavorite;
+  const { text, author, isFavorite } = quote;
+  toggleFavoriteBtnIcon(isFavorite, favoriteBtn);
+
+  if (isFavorite) {
+    showFavoriteCard(text, author, favoritesContainer);
+>>>>>>> 47116977aec46b6ae04319aa47f467f6122538ac
   } else {
     removeFavoriteCard(quote.id);
   }
 }
 
 function handleFavorite(isFavorite) {
+<<<<<<< HEAD
   showFavoriteBtn();
   toggleFavoriteBtnIcon(isFavorite);
 }
@@ -19,6 +38,15 @@ function handleFavorite(isFavorite) {
 function toggleFavoriteBtnIcon(isFavorite) {
   quoteFavoriteBtn.classList.toggle("fa", isFavorite);
   quoteFavoriteBtn.classList.toggle("far", !isFavorite);
+=======
+  showBtn(favoriteBtn);
+  toggleFavoriteBtnIcon(isFavorite, favoriteBtn);
+}
+
+function toggleFavoriteBtnIcon(isFavorite, el) {
+  el.classList.toggle("fa", isFavorite);
+  el.classList.toggle("far", !isFavorite);
+>>>>>>> 47116977aec46b6ae04319aa47f467f6122538ac
 }
 
 function showFavoriteBtn() {
@@ -64,4 +92,14 @@ function removeFavoriteCard(id) {
   }
 }
 
+<<<<<<< HEAD
 export { handleFavorite, toggleFavorite, hideFavoriteBtn };
+=======
+export {
+  handleFavorite,
+  toggleFavoriteBtnIcon as toggleFavoriteIcon,
+  showFavoriteCard,
+  showBtn,
+  hideBtn,
+};
+>>>>>>> 47116977aec46b6ae04319aa47f467f6122538ac
