@@ -2,7 +2,7 @@
 
 A simple **Vanilla JavaScript** application for displaying random quotes and managing a list of favorites.
 
-## Pages: https://uunmuun.github.io/random-quotes/ 
+### Pages: https://uunmuun.github.io/random-quotes/ 
 
 ## Features
 - Display a random quote from a predefined list.
